@@ -528,6 +528,92 @@
       "problemMatcher": []
     },
     {
+      "label": "Run tests for ArrayStackHiddenTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "group": "test",
+      "args": [
+        {
+          "value": "test",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.ArrayStackHiddenTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run specific test from ArrayStackHiddenTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "group": "test",
+      "args": [
+        {
+          "value": "test",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.ArrayStackHiddenTest",
+          "quoting": "escape"
+        },
+        {
+          "value": "${input:DataStructures.ArrayStackHiddenTest}",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check ArrayStackHiddenTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.ArrayStackHiddenTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for ArrayStackHiddenTest",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.ArrayStackHiddenTest",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
       "label": "Grade Assignment",
       "type": "shell",
       "command": "${config:ummBinaryPath}",
@@ -568,6 +654,20 @@
     {
       "type": "pickString",
       "id": "DataStructures.ArrayStackTest",
+      "description": "Which test to run?",
+      "options": [
+        "testArrayStack",
+        "testIsEmpty",
+        "testSize",
+        "testPush",
+        "testPop",
+        "testPeek"
+      ],
+      "default": "testArrayStack"
+    },
+    {
+      "type": "pickString",
+      "id": "DataStructures.ArrayStackHiddenTest",
       "description": "Which test to run?",
       "options": [
         "testArrayStack",
