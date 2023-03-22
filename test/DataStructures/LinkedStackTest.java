@@ -6,14 +6,14 @@ import ADTs.StackADT;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class ArrayStackTest {
-  StackADT<Integer> stack = new ArrayStack<Integer>(10);
+public class LinkedStackTest {
+  StackADT<Integer> stack = new LinkedStack<Integer>();
 
   @Test
-  public void testArrayStack() {
+  public void testLinkedStack() {
     assertEquals(0, stack.size());
 
-    stack = new ArrayStack<Integer>();
+    stack = new LinkedStack<Integer>();
     assertEquals(0, stack.size());
   }
 

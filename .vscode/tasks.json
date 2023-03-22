@@ -82,7 +82,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Run tests for ArrayStackTest",
+      "label": "Run tests for LinkedStackTest",
       "type": "shell",
       "command": "${config:ummBinaryPath}",
       "group": "test",
@@ -92,7 +92,7 @@
           "quoting": "escape"
         },
         {
-          "value": "DataStructures.ArrayStackTest",
+          "value": "DataStructures.LinkedStackTest",
           "quoting": "escape"
         }
       ],
@@ -103,7 +103,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Run specific test from ArrayStackTest",
+      "label": "Run specific test from LinkedStackTest",
       "type": "shell",
       "command": "${config:ummBinaryPath}",
       "group": "test",
@@ -113,11 +113,11 @@
           "quoting": "escape"
         },
         {
-          "value": "DataStructures.ArrayStackTest",
+          "value": "DataStructures.LinkedStackTest",
           "quoting": "escape"
         },
         {
-          "value": "${input:DataStructures.ArrayStackTest}",
+          "value": "${input:DataStructures.LinkedStackTest}",
           "quoting": "escape"
         }
       ],
@@ -128,7 +128,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Check ArrayStackTest",
+      "label": "Check LinkedStackTest",
       "type": "shell",
       "command": "${config:ummBinaryPath}",
       "args": [
@@ -137,7 +137,7 @@
           "quoting": "escape"
         },
         {
-          "value": "DataStructures.ArrayStackTest",
+          "value": "DataStructures.LinkedStackTest",
           "quoting": "escape"
         }
       ],
@@ -148,7 +148,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Check JavaDoc for ArrayStackTest",
+      "label": "Check JavaDoc for LinkedStackTest",
       "type": "shell",
       "command": "${config:ummBinaryPath}",
       "args": [
@@ -157,7 +157,7 @@
           "quoting": "escape"
         },
         {
-          "value": "DataStructures.ArrayStackTest",
+          "value": "DataStructures.LinkedStackTest",
           "quoting": "escape"
         }
       ],
@@ -368,7 +368,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Check ArrayStack",
+      "label": "Check SinglyLinkedNode",
       "type": "shell",
       "command": "${config:ummBinaryPath}",
       "args": [
@@ -377,7 +377,7 @@
           "quoting": "escape"
         },
         {
-          "value": "DataStructures.ArrayStack",
+          "value": "DataStructures.SinglyLinkedNode",
           "quoting": "escape"
         }
       ],
@@ -388,7 +388,7 @@
       "problemMatcher": []
     },
     {
-      "label": "Check JavaDoc for ArrayStack",
+      "label": "Check JavaDoc for SinglyLinkedNode",
       "type": "shell",
       "command": "${config:ummBinaryPath}",
       "args": [
@@ -397,7 +397,47 @@
           "quoting": "escape"
         },
         {
-          "value": "DataStructures.ArrayStack",
+          "value": "DataStructures.SinglyLinkedNode",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check LinkedList",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.LinkedList",
+          "quoting": "escape"
+        }
+      ],
+      "dependsOn": [
+        "Set umm to be executable"
+      ],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check JavaDoc for LinkedList",
+      "type": "shell",
+      "command": "${config:ummBinaryPath}",
+      "args": [
+        {
+          "value": "doc-check",
+          "quoting": "escape"
+        },
+        {
+          "value": "DataStructures.LinkedList",
           "quoting": "escape"
         }
       ],
@@ -528,92 +568,6 @@
       "problemMatcher": []
     },
     {
-      "label": "Run tests for ArrayStackHiddenTest",
-      "type": "shell",
-      "command": "${config:ummBinaryPath}",
-      "group": "test",
-      "args": [
-        {
-          "value": "test",
-          "quoting": "escape"
-        },
-        {
-          "value": "DataStructures.ArrayStackHiddenTest",
-          "quoting": "escape"
-        }
-      ],
-      "dependsOn": [
-        "Set umm to be executable"
-      ],
-      "dependsOrder": "sequence",
-      "problemMatcher": []
-    },
-    {
-      "label": "Run specific test from ArrayStackHiddenTest",
-      "type": "shell",
-      "command": "${config:ummBinaryPath}",
-      "group": "test",
-      "args": [
-        {
-          "value": "test",
-          "quoting": "escape"
-        },
-        {
-          "value": "DataStructures.ArrayStackHiddenTest",
-          "quoting": "escape"
-        },
-        {
-          "value": "${input:DataStructures.ArrayStackHiddenTest}",
-          "quoting": "escape"
-        }
-      ],
-      "dependsOn": [
-        "Set umm to be executable"
-      ],
-      "dependsOrder": "sequence",
-      "problemMatcher": []
-    },
-    {
-      "label": "Check ArrayStackHiddenTest",
-      "type": "shell",
-      "command": "${config:ummBinaryPath}",
-      "args": [
-        {
-          "value": "check",
-          "quoting": "escape"
-        },
-        {
-          "value": "DataStructures.ArrayStackHiddenTest",
-          "quoting": "escape"
-        }
-      ],
-      "dependsOn": [
-        "Set umm to be executable"
-      ],
-      "dependsOrder": "sequence",
-      "problemMatcher": []
-    },
-    {
-      "label": "Check JavaDoc for ArrayStackHiddenTest",
-      "type": "shell",
-      "command": "${config:ummBinaryPath}",
-      "args": [
-        {
-          "value": "doc-check",
-          "quoting": "escape"
-        },
-        {
-          "value": "DataStructures.ArrayStackHiddenTest",
-          "quoting": "escape"
-        }
-      ],
-      "dependsOn": [
-        "Set umm to be executable"
-      ],
-      "dependsOrder": "sequence",
-      "problemMatcher": []
-    },
-    {
       "label": "Grade Assignment",
       "type": "shell",
       "command": "${config:ummBinaryPath}",
@@ -653,31 +607,17 @@
   "inputs": [
     {
       "type": "pickString",
-      "id": "DataStructures.ArrayStackTest",
+      "id": "DataStructures.LinkedStackTest",
       "description": "Which test to run?",
       "options": [
-        "testArrayStack",
+        "testLinkedStack",
         "testIsEmpty",
         "testSize",
         "testPush",
         "testPop",
         "testPeek"
       ],
-      "default": "testArrayStack"
-    },
-    {
-      "type": "pickString",
-      "id": "DataStructures.ArrayStackHiddenTest",
-      "description": "Which test to run?",
-      "options": [
-        "testArrayStack",
-        "testIsEmpty",
-        "testSize",
-        "testPush",
-        "testPop",
-        "testPeek"
-      ],
-      "default": "testArrayStack"
+      "default": "testLinkedStack"
     },
     {
       "type": "pickString",
@@ -685,15 +625,15 @@
       "description": "Which assignment are you working on?",
       "options": [
         "\"Project: Pyramid Scheme\"",
-        "\"Project: WorkAheadQueue\"",
         "\"Lab 8A - Recursion in Trees\"",
         "\"Sample Assignment\"",
-        "\"Project: ShoppingList - JavaDoc\"",
         "\"4L. Test Driven Development\"",
         "\"13L. Implementing Array-backed Lists\"",
         "\"14L. Implementing ArrayStack\"",
         "\"15L. Implementing ArrayQueue\"",
-        "\"Implementing LinkedLists\"",
+        "\"16L. Implementing LinkedLists\"",
+        "\"Extra Credit: ShoppingList\"",
+        "\"Extra Credit: WorkAheadQueue\"",
         "\"Implementing LinkedStack\"",
         "\"Implementing LinkedQueue\"",
         "\"8L. Writing Junit tests - Part 2 - Student Class\"",
