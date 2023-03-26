@@ -89,7 +89,7 @@ public class LinkedStackTest {
       assertEquals(out.intValue(), 1);
       assertEquals(2, stack.size());
     } catch (Exception e) {
-      fail("Exception should not be thrown here.");
+      fail(e.toString());
     }
 
     try {

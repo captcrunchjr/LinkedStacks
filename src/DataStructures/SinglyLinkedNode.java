@@ -2,7 +2,7 @@ package DataStructures;
 
 public class SinglyLinkedNode<T> {
   private T data;
-  private SinglyLinkedNode<T> next;
+  private SinglyLinkedNode<T> next = null;
 
   /**
    * @param data
